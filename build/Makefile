@@ -51,24 +51,13 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/liqiang/Desktop/fog_detection
+CMAKE_SOURCE_DIR = /home/liqiang/Documents/FOG_DETECTION/fog_detection_c
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/liqiang/Desktop/fog_detection/build
+CMAKE_BINARY_DIR = /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -81,11 +70,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liqiang/Desktop/fog_detection/build/CMakeFiles /home/liqiang/Desktop/fog_detection/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/liqiang/Desktop/fog_detection/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -114,44 +114,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_object
+# Target rules for targets named slicer
 
 # Build rule for target.
-test_object: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_object
-.PHONY : test_object
+slicer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 slicer
+.PHONY : slicer
 
 # fast build rule for target.
-test_object/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_object.dir/build.make CMakeFiles/test_object.dir/build
-.PHONY : test_object/fast
+slicer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slicer.dir/build.make CMakeFiles/slicer.dir/build
+.PHONY : slicer/fast
 
-main.o: main.cpp.o
+#=============================================================================
+# Target rules for targets named dark
 
-.PHONY : main.o
+# Build rule for target.
+dark: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dark
+.PHONY : dark
+
+# fast build rule for target.
+dark/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dark.dir/build.make CMakeFiles/dark.dir/build
+.PHONY : dark/fast
+
+script/createDarkchanel.o: script/createDarkchanel.cc.o
+
+.PHONY : script/createDarkchanel.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_object.dir/build.make CMakeFiles/test_object.dir/main.cpp.o
-.PHONY : main.cpp.o
+script/createDarkchanel.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dark.dir/build.make CMakeFiles/dark.dir/script/createDarkchanel.cc.o
+.PHONY : script/createDarkchanel.cc.o
 
-main.i: main.cpp.i
+script/createDarkchanel.i: script/createDarkchanel.cc.i
 
-.PHONY : main.i
+.PHONY : script/createDarkchanel.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_object.dir/build.make CMakeFiles/test_object.dir/main.cpp.i
-.PHONY : main.cpp.i
+script/createDarkchanel.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dark.dir/build.make CMakeFiles/dark.dir/script/createDarkchanel.cc.i
+.PHONY : script/createDarkchanel.cc.i
 
-main.s: main.cpp.s
+script/createDarkchanel.s: script/createDarkchanel.cc.s
 
-.PHONY : main.s
+.PHONY : script/createDarkchanel.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_object.dir/build.make CMakeFiles/test_object.dir/main.cpp.s
-.PHONY : main.cpp.s
+script/createDarkchanel.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dark.dir/build.make CMakeFiles/dark.dir/script/createDarkchanel.cc.s
+.PHONY : script/createDarkchanel.cc.s
+
+script/createSplitimage.o: script/createSplitimage.cc.o
+
+.PHONY : script/createSplitimage.o
+
+# target to build an object file
+script/createSplitimage.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slicer.dir/build.make CMakeFiles/slicer.dir/script/createSplitimage.cc.o
+.PHONY : script/createSplitimage.cc.o
+
+script/createSplitimage.i: script/createSplitimage.cc.i
+
+.PHONY : script/createSplitimage.i
+
+# target to preprocess a source file
+script/createSplitimage.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slicer.dir/build.make CMakeFiles/slicer.dir/script/createSplitimage.cc.i
+.PHONY : script/createSplitimage.cc.i
+
+script/createSplitimage.s: script/createSplitimage.cc.s
+
+.PHONY : script/createSplitimage.s
+
+# target to generate assembly for a file
+script/createSplitimage.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slicer.dir/build.make CMakeFiles/slicer.dir/script/createSplitimage.cc.s
+.PHONY : script/createSplitimage.cc.s
 
 src/get_darkchanel.o: src/get_darkchanel.cc.o
 
@@ -159,7 +199,8 @@ src/get_darkchanel.o: src/get_darkchanel.cc.o
 
 # target to build an object file
 src/get_darkchanel.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_object.dir/build.make CMakeFiles/test_object.dir/src/get_darkchanel.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slicer.dir/build.make CMakeFiles/slicer.dir/src/get_darkchanel.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dark.dir/build.make CMakeFiles/dark.dir/src/get_darkchanel.cc.o
 .PHONY : src/get_darkchanel.cc.o
 
 src/get_darkchanel.i: src/get_darkchanel.cc.i
@@ -168,7 +209,8 @@ src/get_darkchanel.i: src/get_darkchanel.cc.i
 
 # target to preprocess a source file
 src/get_darkchanel.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_object.dir/build.make CMakeFiles/test_object.dir/src/get_darkchanel.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slicer.dir/build.make CMakeFiles/slicer.dir/src/get_darkchanel.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dark.dir/build.make CMakeFiles/dark.dir/src/get_darkchanel.cc.i
 .PHONY : src/get_darkchanel.cc.i
 
 src/get_darkchanel.s: src/get_darkchanel.cc.s
@@ -177,7 +219,8 @@ src/get_darkchanel.s: src/get_darkchanel.cc.s
 
 # target to generate assembly for a file
 src/get_darkchanel.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_object.dir/build.make CMakeFiles/test_object.dir/src/get_darkchanel.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slicer.dir/build.make CMakeFiles/slicer.dir/src/get_darkchanel.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dark.dir/build.make CMakeFiles/dark.dir/src/get_darkchanel.cc.s
 .PHONY : src/get_darkchanel.cc.s
 
 src/get_slice.o: src/get_slice.cc.o
@@ -186,7 +229,8 @@ src/get_slice.o: src/get_slice.cc.o
 
 # target to build an object file
 src/get_slice.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_object.dir/build.make CMakeFiles/test_object.dir/src/get_slice.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slicer.dir/build.make CMakeFiles/slicer.dir/src/get_slice.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dark.dir/build.make CMakeFiles/dark.dir/src/get_slice.cc.o
 .PHONY : src/get_slice.cc.o
 
 src/get_slice.i: src/get_slice.cc.i
@@ -195,7 +239,8 @@ src/get_slice.i: src/get_slice.cc.i
 
 # target to preprocess a source file
 src/get_slice.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_object.dir/build.make CMakeFiles/test_object.dir/src/get_slice.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slicer.dir/build.make CMakeFiles/slicer.dir/src/get_slice.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dark.dir/build.make CMakeFiles/dark.dir/src/get_slice.cc.i
 .PHONY : src/get_slice.cc.i
 
 src/get_slice.s: src/get_slice.cc.s
@@ -204,7 +249,8 @@ src/get_slice.s: src/get_slice.cc.s
 
 # target to generate assembly for a file
 src/get_slice.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_object.dir/build.make CMakeFiles/test_object.dir/src/get_slice.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slicer.dir/build.make CMakeFiles/slicer.dir/src/get_slice.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dark.dir/build.make CMakeFiles/dark.dir/src/get_slice.cc.s
 .PHONY : src/get_slice.cc.s
 
 # Help Target
@@ -213,12 +259,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... test_object"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... slicer"
+	@echo "... rebuild_cache"
+	@echo "... dark"
+	@echo "... script/createDarkchanel.o"
+	@echo "... script/createDarkchanel.i"
+	@echo "... script/createDarkchanel.s"
+	@echo "... script/createSplitimage.o"
+	@echo "... script/createSplitimage.i"
+	@echo "... script/createSplitimage.s"
 	@echo "... src/get_darkchanel.o"
 	@echo "... src/get_darkchanel.i"
 	@echo "... src/get_darkchanel.s"

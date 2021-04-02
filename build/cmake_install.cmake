@@ -1,4 +1,4 @@
-# Install script for directory: /home/liqiang/Desktop/fog_detection
+# Install script for directory: /home/liqiang/Documents/FOG_DETECTION/fog_detection_c
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/liqiang/Desktop/fog_detection/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

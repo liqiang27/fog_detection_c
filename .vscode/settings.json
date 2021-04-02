@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "any": "cpp",
+        "*.ipp": "cpp",
+        "array": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "string_view": "cpp",
+        "rope": "cpp",
+        "slist": "cpp",
+        "regex": "cpp"
+    },
+    "git.ignoreLimitWarning": true,
+    "C_Cpp.errorSquiggles": "Disabled"
+}

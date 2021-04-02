@@ -1,0 +1,51 @@
+
+{
+    "CAMERAS":
+    {
+        "cam00":{
+            "IP":"00.00.00.00",
+            "User":"XXX",
+            "Password":"xxxxxxxx",
+            "Available":"true"
+            },
+        "cam01":{
+            "IP":"00.00.00.00",
+            "User":"XXX",
+            "Password":"xxxxxxxx",
+            "Available":"false"
+        },
+        "cam02":{
+            "IP":"00.00.00.00",
+            "User":"XXX",
+            "Password":"xxxxxxxx",
+            "Available":"false"
+        }
+    },
+
+    "MODELS":
+    {
+        "model00": {
+            "path":"XXXXX",
+            "discription":""
+        },
+        "model01": {
+            "path":"XXXXX",
+            "discription":""
+        }
+    },
+
+    "DATABASE":{
+        "db_name":"",
+        "host_address":"",
+        "password":"",
+        "port":"",
+        "user":""
+    },
+
+    "IMG_PATH":"/home/dell/Documents/images/",
+
+    "MODEL_CHOOSE":"0",
+
+    "MAX_THREADS":"16",
+
+}
