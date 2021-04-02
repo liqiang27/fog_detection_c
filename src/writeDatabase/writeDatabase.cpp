@@ -4,13 +4,16 @@
  * @Author: Lstron
  * @Date: 2021-03-25 19:19:52
  * @LastEditors: Lstron
- * @LastEditTime: 2021-03-29 16:32:39
+ * @LastEditTime: 2021-04-02 20:36:45
  */
 
 #include "writeDatabase.h"
 
 Database::Database() {
-
+    this->params = {};
+    this->res.clear();
+    this->my_conn = nullptr;
+    this->my_work = nullptr;
 }
 
 Database::~Database() {

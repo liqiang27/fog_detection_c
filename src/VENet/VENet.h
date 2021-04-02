@@ -5,7 +5,7 @@
  * @Author: Lstron
  * @Date: 2021-03-25 19:18:07
  * @LastEditors: Lstron
- * @LastEditTime: 2021-03-31 15:40:06
+ * @LastEditTime: 2021-04-02 19:52:17
  */
 
 #include "my_common.h"
@@ -17,7 +17,8 @@ class VENet_Processor{
         VENet_Processor();
         void init(int gpu_id);
         void set_model(const char* model_name);
-        void set_input(at::Tensor input_1, at::Tensor input_2);
+        void set_input_2(at::Tensor input_1, at::Tensor input_2);
+        void set_input_1(at::Tensor input_1);
         std::vector<result_format> get_result();
     
     private:

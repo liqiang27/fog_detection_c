@@ -27,23 +27,3 @@ message(STATUS "    version: ${OpenCV_VERSION}")
 message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
-add_executable(test_object      main.cpp  
-                                                                ${PROJECT_PATH}/src/get_darkchanel.cc 
-                                                                ${PROJECT_PATH}/src/get_slice.cc 
-                                                                )
-
-target_link_libraries(test_object  -lboost_filesystem -lboost_system ${OpenCV_LIBS} ${Boost_LIBRARIES})
-
-
-add_executable(slicer    ${PROJECT_PATH}/script/createSplitimage.cc 
-                                                                ${PROJECT_PATH}/src/get_darkchanel.cc 
-                                                                ${PROJECT_PATH}/src/get_slice.cc )
-
-target_link_libraries(slicer -lboost_filesystem -lboost_system ${OpenCV_LIBS} ${Boost_LIBRARIES})
-
-
-add_executable(dark    ${PROJECT_PATH}/script/createDarkchanel.cc 
-                                                                ${PROJECT_PATH}/src/get_darkchanel.cc 
-                                                                ${PROJECT_PATH}/src/get_slice.cc )
-
-target_link_libraries(dark -lboost_filesystem -lboost_system ${OpenCV_LIBS} ${Boost_LIBRARIES})

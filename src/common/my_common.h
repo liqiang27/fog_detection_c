@@ -5,7 +5,7 @@
  * @Author: Lstron
  * @Date: 2021-03-28 17:00:31
  * @LastEditors: Lstron
- * @LastEditTime: 2021-04-01 18:35:28
+ * @LastEditTime: 2021-04-02 20:06:25
  */
 
 #include <iostream>
@@ -36,6 +36,7 @@
  * camera info
  **/
 typedef struct camera_info_{
+    int cam_id;
     bool is_open;
     std::string cam_ip;
     std::string user_name;
@@ -66,12 +67,22 @@ typedef struct result_format_
     std::string img_name;
     int fog_level;
     double visibility;
+    result_format_& operator=(result_format_ t_result) {
+        this->img_name.assign(t_result.img_name);
+        this->fog_level = t_result.fog_level;
+        this->visibility = t_result.visibility;
+    }
 }result_format;
 
 typedef struct img_instance_{
     cv::Mat img;
     int cam_id;
     std::string times;
+    img_instance_& operator=(img_instance_ t_instance) {
+        this->cam_id = t_instance.cam_id;
+        this->img  =t_instance.img.clone();
+        this->times.assign(t_instance.times);
+    };
 }img_instance;
 
 using IMGS = std::vector<cv::Mat>;
