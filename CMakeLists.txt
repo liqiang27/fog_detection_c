@@ -22,6 +22,7 @@ include_directories ("${PROJECT_PATH}/include")
 include_directories("~/libtorch/include")
 include_directories(${Boost_INCLUDE_DIRS})
 include_directories(${OpenCV_INCLUDE_DIRS})
+include_directories(("${PROJECT_PATH}/jsoncpp/json"))
 
 
 find_package(OpenCV REQUIRED)
@@ -44,6 +45,7 @@ aux_source_directory(${PROJECT_PATH}/taskQueue DIR_QUEUE_SRC)
 aux_source_directory(${PROJECT_PATH}/testModule DIR_TEST_SRC)
 aux_source_directory(${PROJECT_PATH}/VENet DIR_VENET_SRC)
 aux_source_directory(${PROJECT_PATH}/writeDatabase DIR_DATABASE_SRC)
+aux_source_directory(${PROJECT_PATH}/jsoncpp DIR_JSON_SRC)
 
 
 
@@ -55,7 +57,8 @@ add_library(venet SHARED ${DIR_MAIN_SRC}
                                                         ${DIR_QUEUE_SRC}
                                                         ${DIR_TEST_SRC}
                                                         ${DIR_VENET_SRC}
-                                                        ${DIR_DATABASE_SRC})
+                                                        ${DIR_DATABASE_SRC}
+                                                        ${DIR_JSON_SRC})
 
 add_executable(main_process ${DIR_MAIN_SRC}
                                                                  ${DIR_COMMON_SRC}
@@ -65,7 +68,8 @@ add_executable(main_process ${DIR_MAIN_SRC}
                                                                  ${DIR_QUEUE_SRC}
                                                                  ${DIR_TEST_SRC}
                                                                  ${DIR_VENET_SRC}
-                                                                 ${DIR_DATABASE_SRC})
+                                                                 ${DIR_DATABASE_SRC}
+                                                                 ${DIR_JSON_SRC})
 
 target_link_libraries(main_process pthread pqxx ${OpenCV_LIBS} ${CUDA_LIB2} ${CUDA_LIB} ${Boost_LIBRARIES} ${TORCH_LIBRARIES})
 
