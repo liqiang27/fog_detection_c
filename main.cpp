@@ -1,25 +1,26 @@
-/*
- * @Descripttion: The main program of fog visibility estimation system.
- * @version: v1.0
- * @Author: Lstron
- * @Date: 2020-12-26 01:22:36
- * @LastEditors: Lstron
- * @LastEditTime: 2021-04-18 10:25:34
- */
+#include <memory.h>
+#include <pthread.h>
 
 #include "my_common.h"
 #include "testServer.h"
 #include "taskQueue.h"
 #include "testModule.h"
-#include "imgCapture.h"
 #include "imgPreprocess.h"
 #include "get_tensor.h"
 #include "VENet.h"
 #include "writeDatabase.
 #include "readConfig.h"
 
-#include <condition_variable>
-#include <pthread.h>
+using namespace std;
+
+/*
+ * @Descripttion: The main program of fog visibility estimation system.
+ * @version: v1.0
+ * @Author: Lstron
+ * @Date: 2020-12-26 01:22:36
+ * @LastEditors: Lstron
+ * @LastEditTime: 2021-04-18 22:25:28
+ */
 
 //global variable
 taskQueue<img_instance> g_task_queue;

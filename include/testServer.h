@@ -1,20 +1,18 @@
-#pragma once
+#ifndef TESTSERVER_H_
+#define TESTSERVER_H_
 /*
  * @Descripttion: 
  * @version: 
  * @Author: Lstron
  * @Date: 2021-04-01 18:03:05
  * @LastEditors: Lstron
- * @LastEditTime: 2021-04-01 18:38:16
+ * @LastEditTime: 2021-04-18 23:55:46
  */
-
 #include "my_common.h"
 
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
-#include <arpa/inet.h>
+
+
+
 
 using namespace std;
 
@@ -47,3 +45,4 @@ protected:
 
 };
 
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TESTMODULE_H_
+#define TESTMODULE_H_
+
 /*
  * @Descripttion: Test whether the database transmission,
  *             image information connection and GPU are normal
@@ -6,14 +8,10 @@
  * @Author: Lstron
  * @Date: 2021-03-24 23:28:02
  * @LastEditors: Lstron
- * @LastEditTime: 2021-03-31 15:41:03
+ * @LastEditTime: 2021-04-18 23:18:53
  */
+
 #include "my_common.h"
-
-#include <pqxx/pqxx>
-#include "cuda_runtime.h"
-#include "HK_Camera/consoleDemo/include/HCNetSDK.h"
-
 
 /**
  * @name: checkCamera
@@ -40,6 +38,8 @@ bool checkDatabase();
  * @return {*}
  */
 bool checkGPU();
+
+#endif
 
 
 

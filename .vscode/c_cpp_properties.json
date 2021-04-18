@@ -6,7 +6,7 @@
                 "${workspaceFolder}/**",
                 "/usr/local/cuda-10.0/include/**",
                 "${workspaceFolder}/src/common",
-                "/usr/local/include/opencv4/opencv2"
+                "/usr/local/include/opencv2"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

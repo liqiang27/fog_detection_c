@@ -1,12 +1,14 @@
-#pragma once
+#ifndef READCONFIG_H_
+#define READCONFIG_H_
 /*
  * @Descripttion:  read config.json
  * @version: 1.0
  * @Author: lstron
  * @Date: 2021-03-24 20:28:36
  * @LastEditors: Lstron
- * @LastEditTime: 2021-03-31 15:41:51
+ * @LastEditTime: 2021-04-18 23:17:50
  */
+
 #include "my_common.h"
 
 /**
@@ -25,6 +27,8 @@ bool checkConfigfile();
  * @return {bool}
  */
 bool readConfig();
+
+#endif
 
 
 

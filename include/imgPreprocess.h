@@ -1,14 +1,14 @@
-#pragma once
+#ifndef IMGPREPROCESS_H_
+#define IMGPREPROCESS_H_
 /*
  * @Descripttion: imgPreprocess
  * @version: v1.0
  * @Author: Lstron
  * @Date: 2021-03-25 19:14:18
  * @LastEditors: Lstron
- * @LastEditTime: 2021-03-31 15:43:55
+ * @LastEditTime: 2021-04-18 23:24:52
  */
 
-#include "my_common.h"
 #include "get_darkchanel.h"
 #include "get_slice.h"
 
@@ -32,3 +32,6 @@ private:
 
     void imgprocessing();
 };
+
+#endif
+

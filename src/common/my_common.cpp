@@ -4,10 +4,17 @@
  * @Author: Lstron
  * @Date: 2021-03-28 17:00:37
  * @LastEditors: Lstron
- * @LastEditTime: 2021-03-31 15:28:03
+ * @LastEditTime: 2021-04-18 23:12:50
  */
 
 #include "my_common.h"
+#include <fstream>
+#include <vector>
+#include <ctime>
+
+#include <boost/filesystem.hpp>
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
 
 std::string createID(const int cam_id) {
     time_t timer;

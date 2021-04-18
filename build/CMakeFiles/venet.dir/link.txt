@@ -1,1 +1,1 @@
-/usr/bin/g++-7 -fPIC  -O3 -Wall  -shared -Wl,-soname,libvenet.so -o libvenet.so CMakeFiles/venet.dir/example-app.cpp.o CMakeFiles/venet.dir/main.cpp.o CMakeFiles/venet.dir/main_t.cpp.o 
+/usr/bin/g++-7 -fPIC  -O3 -Wall  -shared -Wl,-soname,libvenet.so -o libvenet.so CMakeFiles/venet.dir/main.cpp.o 

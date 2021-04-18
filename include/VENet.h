@@ -1,11 +1,12 @@
-#pragma once
+#ifndef VENET_H_
+#define VENET_H_
 /*
  * @Descripttion: 
  * @version: 
  * @Author: Lstron
  * @Date: 2021-03-25 19:18:07
  * @LastEditors: Lstron
- * @LastEditTime: 2021-03-31 15:40:06
+ * @LastEditTime: 2021-04-18 23:19:46
  */
 
 #include "my_common.h"
@@ -29,3 +30,5 @@ class VENet_Processor{
         at::Tensor output;
         torch::jit::script::Module module;
 };
+
+#endif

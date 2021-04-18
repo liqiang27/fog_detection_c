@@ -25,19 +25,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 48,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 19,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
 				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 21,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 24,
 				"parent" : 0
 			}
 		]
@@ -51,7 +57,7 @@
 					"fragment" : " -O3 -Wall -fPIC  "
 				},
 				{
-					"fragment" : "-std=gnu++14"
+					"fragment" : "-std=gnu++11"
 				}
 			],
 			"defines" : 
@@ -69,14 +75,24 @@
 				{
 					"backtrace" : 3,
 					"path" : "/home/liqiang/libtorch/include"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/("
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/jsoncpp/json"
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/)"
 				}
 			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				0,
-				1,
-				2
+				0
 			]
 		}
 	],
@@ -105,9 +121,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1,
-				2
+				0
 			]
 		}
 	],
@@ -116,19 +130,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "example-app.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "main.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "main_t.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

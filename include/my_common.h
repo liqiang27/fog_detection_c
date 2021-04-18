@@ -1,30 +1,15 @@
-#pragma once
+#ifndef MY_COMMON_H_
+#define MY_COMMON_H_
 /*
  * @Descripttion: Some public tools function.
  * @version: v1.0
  * @Author: Lstron
  * @Date: 2021-03-28 17:00:31
  * @LastEditors: Lstron
- * @LastEditTime: 2021-04-01 18:35:28
+ * @LastEditTime: 2021-04-19 00:06:29
  */
 
 #include <iostream>
-#include <fstream>
-#include <ctime>
-#include <string>
-#include <memory.h>
-#include <vector>
-#include <cstdlib>
-#include <algorithm>
-#include <cmath>
-#include <unistd.h>
-#include <random>
-#include <pthread.h>
-
-#include <boost/filesystem.hpp>
-#include <boost/filesystem/operations.hpp>
-#include <boost/filesystem/path.hpp>
-
 #include "opencv2/opencv.hpp"
 
 #define IMAGE_SIZE 6220800
@@ -36,6 +21,7 @@
  * camera info
  **/
 typedef struct camera_info_{
+    int cam_id;
     bool is_open;
     std::string cam_ip;
     std::string user_name;
@@ -66,12 +52,22 @@ typedef struct result_format_
     std::string img_name;
     int fog_level;
     double visibility;
+    result_format_& operator=(result_format_ t_result) {
+        this->img_name.assign(t_result.img_name);
+        this->fog_level = t_result.fog_level;
+        this->visibility = t_result.visibility;
+    }
 }result_format;
 
 typedef struct img_instance_{
     cv::Mat img;
     int cam_id;
     std::string times;
+    img_instance_& operator=(img_instance_ t_instance) {
+        this->cam_id = t_instance.cam_id;
+        this->img  =t_instance.img.clone();
+        this->times.assign(t_instance.times);
+    };
 }img_instance;
 
 using IMGS = std::vector<cv::Mat>;
@@ -110,3 +106,4 @@ cv::Mat char2Mat(char* modelImage);
 std::int getFilenames(const std::string& dir, std::vector<std::string>& filenames);
 
 
+#endif

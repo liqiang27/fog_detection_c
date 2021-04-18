@@ -32,8 +32,9 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:STRING=Debug
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -108,8 +109,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//No help, variable specified on the command line.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
+//Enable/Disable output of compile commands during generation.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
@@ -394,12 +395,6 @@ MKL_DIR:PATH=MKL_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/usr/local/share/OpenCV
-
-//Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/liqiang/Documents/FOG_DETECTION/fog_detection_c
 
 //Path to a library.
 TORCH_LIBRARY:FILEPATH=/home/liqiang/libtorch/lib/libtorch.so

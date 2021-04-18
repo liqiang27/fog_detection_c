@@ -60,22 +60,9 @@ include CMakeFiles/main_process.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main_process.dir/flags.make
 
-CMakeFiles/main_process.dir/example-app.cpp.o: CMakeFiles/main_process.dir/flags.make
-CMakeFiles/main_process.dir/example-app.cpp.o: ../example-app.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main_process.dir/example-app.cpp.o"
-	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_process.dir/example-app.cpp.o -c /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/example-app.cpp
-
-CMakeFiles/main_process.dir/example-app.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_process.dir/example-app.cpp.i"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/example-app.cpp > CMakeFiles/main_process.dir/example-app.cpp.i
-
-CMakeFiles/main_process.dir/example-app.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_process.dir/example-app.cpp.s"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/example-app.cpp -o CMakeFiles/main_process.dir/example-app.cpp.s
-
 CMakeFiles/main_process.dir/main.cpp.o: CMakeFiles/main_process.dir/flags.make
 CMakeFiles/main_process.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main_process.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main_process.dir/main.cpp.o"
 	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_process.dir/main.cpp.o -c /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/main.cpp
 
 CMakeFiles/main_process.dir/main.cpp.i: cmake_force
@@ -86,34 +73,80 @@ CMakeFiles/main_process.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_process.dir/main.cpp.s"
 	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/main.cpp -o CMakeFiles/main_process.dir/main.cpp.s
 
-CMakeFiles/main_process.dir/main_t.cpp.o: CMakeFiles/main_process.dir/flags.make
-CMakeFiles/main_process.dir/main_t.cpp.o: ../main_t.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main_process.dir/main_t.cpp.o"
-	/usr/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_process.dir/main_t.cpp.o -c /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/main_t.cpp
-
-CMakeFiles/main_process.dir/main_t.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_process.dir/main_t.cpp.i"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/main_t.cpp > CMakeFiles/main_process.dir/main_t.cpp.i
-
-CMakeFiles/main_process.dir/main_t.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_process.dir/main_t.cpp.s"
-	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/main_t.cpp -o CMakeFiles/main_process.dir/main_t.cpp.s
-
 # Object files for target main_process
 main_process_OBJECTS = \
-"CMakeFiles/main_process.dir/example-app.cpp.o" \
-"CMakeFiles/main_process.dir/main.cpp.o" \
-"CMakeFiles/main_process.dir/main_t.cpp.o"
+"CMakeFiles/main_process.dir/main.cpp.o"
 
 # External object files for target main_process
 main_process_EXTERNAL_OBJECTS =
 
-main_process: CMakeFiles/main_process.dir/example-app.cpp.o
 main_process: CMakeFiles/main_process.dir/main.cpp.o
-main_process: CMakeFiles/main_process.dir/main_t.cpp.o
 main_process: CMakeFiles/main_process.dir/build.make
+main_process: /usr/local/lib/libopencv_stitching.so.3.4.7
+main_process: /usr/local/lib/libopencv_superres.so.3.4.7
+main_process: /usr/local/lib/libopencv_videostab.so.3.4.7
+main_process: /usr/local/lib/libopencv_aruco.so.3.4.7
+main_process: /usr/local/lib/libopencv_bgsegm.so.3.4.7
+main_process: /usr/local/lib/libopencv_bioinspired.so.3.4.7
+main_process: /usr/local/lib/libopencv_ccalib.so.3.4.7
+main_process: /usr/local/lib/libopencv_dnn_objdetect.so.3.4.7
+main_process: /usr/local/lib/libopencv_dpm.so.3.4.7
+main_process: /usr/local/lib/libopencv_face.so.3.4.7
+main_process: /usr/local/lib/libopencv_freetype.so.3.4.7
+main_process: /usr/local/lib/libopencv_fuzzy.so.3.4.7
+main_process: /usr/local/lib/libopencv_hdf.so.3.4.7
+main_process: /usr/local/lib/libopencv_hfs.so.3.4.7
+main_process: /usr/local/lib/libopencv_img_hash.so.3.4.7
+main_process: /usr/local/lib/libopencv_line_descriptor.so.3.4.7
+main_process: /usr/local/lib/libopencv_optflow.so.3.4.7
+main_process: /usr/local/lib/libopencv_reg.so.3.4.7
+main_process: /usr/local/lib/libopencv_rgbd.so.3.4.7
+main_process: /usr/local/lib/libopencv_saliency.so.3.4.7
+main_process: /usr/local/lib/libopencv_sfm.so.3.4.7
+main_process: /usr/local/lib/libopencv_stereo.so.3.4.7
+main_process: /usr/local/lib/libopencv_structured_light.so.3.4.7
+main_process: /usr/local/lib/libopencv_surface_matching.so.3.4.7
+main_process: /usr/local/lib/libopencv_tracking.so.3.4.7
+main_process: /usr/local/lib/libopencv_xfeatures2d.so.3.4.7
+main_process: /usr/local/lib/libopencv_ximgproc.so.3.4.7
+main_process: /usr/local/lib/libopencv_xobjdetect.so.3.4.7
+main_process: /usr/local/lib/libopencv_xphoto.so.3.4.7
+main_process: /home/liqiang/libtorch/lib/libtorch.so
+main_process: /home/liqiang/libtorch/lib/libc10.so
+main_process: /usr/local/cuda/lib64/stubs/libcuda.so
+main_process: /usr/local/cuda/lib64/libnvrtc.so
+main_process: /usr/local/cuda/lib64/libnvToolsExt.so
+main_process: /usr/local/cuda/lib64/libcudart.so
+main_process: /home/liqiang/libtorch/lib/libc10_cuda.so
+main_process: /usr/local/lib/libopencv_shape.so.3.4.7
+main_process: /usr/local/lib/libopencv_viz.so.3.4.7
+main_process: /usr/local/lib/libopencv_phase_unwrapping.so.3.4.7
+main_process: /usr/local/lib/libopencv_video.so.3.4.7
+main_process: /usr/local/lib/libopencv_datasets.so.3.4.7
+main_process: /usr/local/lib/libopencv_plot.so.3.4.7
+main_process: /usr/local/lib/libopencv_text.so.3.4.7
+main_process: /usr/local/lib/libopencv_dnn.so.3.4.7
+main_process: /usr/local/lib/libopencv_highgui.so.3.4.7
+main_process: /usr/local/lib/libopencv_ml.so.3.4.7
+main_process: /usr/local/lib/libopencv_videoio.so.3.4.7
+main_process: /usr/local/lib/libopencv_imgcodecs.so.3.4.7
+main_process: /usr/local/lib/libopencv_objdetect.so.3.4.7
+main_process: /usr/local/lib/libopencv_calib3d.so.3.4.7
+main_process: /usr/local/lib/libopencv_features2d.so.3.4.7
+main_process: /usr/local/lib/libopencv_flann.so.3.4.7
+main_process: /usr/local/lib/libopencv_photo.so.3.4.7
+main_process: /usr/local/lib/libopencv_imgproc.so.3.4.7
+main_process: /usr/local/lib/libopencv_core.so.3.4.7
+main_process: /usr/local/cuda/lib64/libnvToolsExt.so
+main_process: /home/liqiang/libtorch/lib/libc10_cuda.so
+main_process: /home/liqiang/libtorch/lib/libc10.so
+main_process: /usr/local/cuda/lib64/libcudart.so
+main_process: /usr/local/cuda/lib64/libcufft.so
+main_process: /usr/local/cuda/lib64/libcurand.so
+main_process: /usr/local/cuda/lib64/libcublas.so
+main_process: /usr/local/cuda/lib64/libcudnn.so
 main_process: CMakeFiles/main_process.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable main_process"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main_process"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_process.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

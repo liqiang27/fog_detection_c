@@ -139,36 +139,6 @@ venet/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/venet.dir/build.make CMakeFiles/venet.dir/build
 .PHONY : venet/fast
 
-example-app.o: example-app.cpp.o
-
-.PHONY : example-app.o
-
-# target to build an object file
-example-app.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_process.dir/build.make CMakeFiles/main_process.dir/example-app.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/venet.dir/build.make CMakeFiles/venet.dir/example-app.cpp.o
-.PHONY : example-app.cpp.o
-
-example-app.i: example-app.cpp.i
-
-.PHONY : example-app.i
-
-# target to preprocess a source file
-example-app.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_process.dir/build.make CMakeFiles/main_process.dir/example-app.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/venet.dir/build.make CMakeFiles/venet.dir/example-app.cpp.i
-.PHONY : example-app.cpp.i
-
-example-app.s: example-app.cpp.s
-
-.PHONY : example-app.s
-
-# target to generate assembly for a file
-example-app.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_process.dir/build.make CMakeFiles/main_process.dir/example-app.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/venet.dir/build.make CMakeFiles/venet.dir/example-app.cpp.s
-.PHONY : example-app.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -199,36 +169,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/venet.dir/build.make CMakeFiles/venet.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-main_t.o: main_t.cpp.o
-
-.PHONY : main_t.o
-
-# target to build an object file
-main_t.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_process.dir/build.make CMakeFiles/main_process.dir/main_t.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/venet.dir/build.make CMakeFiles/venet.dir/main_t.cpp.o
-.PHONY : main_t.cpp.o
-
-main_t.i: main_t.cpp.i
-
-.PHONY : main_t.i
-
-# target to preprocess a source file
-main_t.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_process.dir/build.make CMakeFiles/main_process.dir/main_t.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/venet.dir/build.make CMakeFiles/venet.dir/main_t.cpp.i
-.PHONY : main_t.cpp.i
-
-main_t.s: main_t.cpp.s
-
-.PHONY : main_t.s
-
-# target to generate assembly for a file
-main_t.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main_process.dir/build.make CMakeFiles/main_process.dir/main_t.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/venet.dir/build.make CMakeFiles/venet.dir/main_t.cpp.s
-.PHONY : main_t.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -239,15 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... main_process"
 	@echo "... venet"
-	@echo "... example-app.o"
-	@echo "... example-app.i"
-	@echo "... example-app.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... main_t.o"
-	@echo "... main_t.i"
-	@echo "... main_t.s"
 .PHONY : help
 
 

@@ -6,12 +6,11 @@ project(test)
 
 
 # specify the C++ standard , build type and optimize  choice
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 set(CMAKE_BUILD_TYPE "Release")
 set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 set(TOP_DIR ${CMAKE_CURRENT_LIST_DIR}/../)
-​
-add_subdirectory(${TOP_DIR}/hello)
 #set variation
 SET(PROJECT_PATH ${PROJECT_SOURCE_DIR})
 SET(BUILD_PATH ${PROJECT_BINARY_DIR})
@@ -36,7 +35,7 @@ message(STATUS "    version: ${OpenCV_VERSION}")
 message(STATUS "    libraries: ${OpenCV_LIBS}")
 message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
 
-aux_source_directory(${PROJECT_PATH} DIR_MAIN_SRC)
+# aux_source_directory(${PROJECT_PATH} DIR_MAIN_SRC)
 aux_source_directory(${PROJECT_PATH}/common DIR_COMMON_SRC)
 aux_source_directory(${PROJECT_PATH}/imgCapture DIR_CAPTURE_SRC)
 aux_source_directory(${PROJECT_PATH}/imgPreprocess DIR_PREPROCESS_SRC)
@@ -49,7 +48,7 @@ aux_source_directory(${PROJECT_PATH}/jsoncpp DIR_JSON_SRC)
 
 
 
-add_library(venet SHARED ${DIR_MAIN_SRC}
+add_library(venet SHARED main.cpp
                                                         ${DIR_COMMON_SRC}
                                                         ${DIR_CAPTURE_SRC}
                                                         ${DIR_PREPROCESS_SRC}
@@ -60,7 +59,7 @@ add_library(venet SHARED ${DIR_MAIN_SRC}
                                                         ${DIR_DATABASE_SRC}
                                                         ${DIR_JSON_SRC})
 
-add_executable(main_process ${DIR_MAIN_SRC}
+add_executable(main_process main.cpp
                                                                  ${DIR_COMMON_SRC}
                                                                  ${DIR_CAPTURE_SRC}
                                                                  ${DIR_PREPROCESS_SRC}

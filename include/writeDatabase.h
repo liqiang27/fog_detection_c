@@ -1,14 +1,16 @@
-#pragma once
+#ifndef WRITEDATABASE_H_
+#define WRITEDATABASE_H_
 /*
  * @Descripttion: write the result to database!
  * @version: v1.0
  * @Author: Lstron
  * @Date: 2021-03-25 19:19:40
  * @LastEditors: Lstron
- * @LastEditTime: 2021-04-01 18:16:55
+ * @LastEditTime: 2021-04-18 23:02:16
  */
-#include "my_common.h"
 #include <pqxx/pqxx>
+#include "my_common.h"
+
 using database_param = database_info;
 
 class Database {
@@ -26,3 +28,5 @@ private:
     pqxx::connection* my_conn;
     pqxx::work* my_work;
 };
+#endif
+

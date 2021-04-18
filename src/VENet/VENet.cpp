@@ -4,13 +4,13 @@
  * @Author: Lstron
  * @Date: 2021-03-25 19:18:15
  * @LastEditors: Lstron
- * @LastEditTime: 2021-04-02 19:55:42
+ * @LastEditTime: 2021-04-18 23:19:33
  */
 
 #include "VENet.h"
 #include "testModule.h"
 #include "torch/torch.h"
-#include <memory>
+#include <memory.h>
 
 using namespace std;
 using namespace at;
