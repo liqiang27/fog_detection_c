@@ -1,2 +1,4 @@
 /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles/rebuild_cache.dir
 /home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles/edit_cache.dir
+/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles/main_process.dir
+/home/liqiang/Documents/FOG_DETECTION/fog_detection_c/build/CMakeFiles/venet.dir

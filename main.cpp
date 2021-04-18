@@ -4,7 +4,7 @@
  * @Author: Lstron
  * @Date: 2020-12-26 01:22:36
  * @LastEditors: Lstron
- * @LastEditTime: 2021-04-02 20:44:58
+ * @LastEditTime: 2021-04-18 10:25:34
  */
 
 #include "my_common.h"
@@ -15,7 +15,7 @@
 #include "imgPreprocess.h"
 #include "get_tensor.h"
 #include "VENet.h"
-#include "writeDatabase.h"
+#include "writeDatabase.
 #include "readConfig.h"
 
 #include <condition_variable>
